@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Fresh Fruits & Vegetable",
+        "image": "fresh-fruits-vegetables"
+    },
+    {
+        "id": 2,
+        "name": "Cooking Oil & Ghee",
+        "image": "cooking-oil"
+    },
+    {
+        "id": 3,
+        "name": "Meat & Fish",
+        "image": "meat-fish"
+    },
+    {
+        "id": 4,
+        "name": "Bakery & Snacks",
+        "image": "bakery-snacks"
+    },
+    {
+        "id": 5,
+        "name": "Dairy & Eggs",
+        "image": "dairy-eggs"
+    },
+    {
+        "id": 6,
+        "name": "Beverages",
+        "image": "beverages"
+    }
+]

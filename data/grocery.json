@@ -1,0 +1,398 @@
+[
+    {
+        "id": 1,
+        "name": "Natural Red Apple",
+        "price": 4.99,
+        "perPrice": "1kg",
+        "description": "Apples are nutritious. Apple may be good for weight loss. Apples may be good for your heart as part of a healthful and varied diet.",
+        "rating": 3.5,
+        "quantity": 30,
+        "category": 1,
+        "isFavorite": false,
+        "isExclusive": true,
+        "isBestSelling": false,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "red-app"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Organic Bananas",
+        "price": 3.00,
+        "perPrice": "7pcs",
+        "description": "Banana is good for hearth health since it contains fiber, potassium, folate, and antioxidants, such as vitamin C.",
+        "rating": 5,
+        "quantity": 100,
+        "category": 1,
+        "isFavorite": false,
+        "isExclusive": true,
+        "isBestSelling": false,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "banana"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Diet Coke",
+        "price": 1.99,
+        "perPrice": "355ml",
+        "description": "Enjoy your chilled diet coke with low sugar.",
+        "rating": 4.0,
+        "quantity": 60,
+        "category": 6,
+        "isFavorite": false,
+        "isExclusive": false,
+        "isBestSelling": false,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "diet-coke"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Beef Bone",
+        "price": 5.99,
+        "perPrice": "1kg",
+        "description": "For all your meals, get the best beef bone at a cool price.",
+        "rating": 4.5,
+        "quantity": 35,
+        "category": 3,
+        "isFavorite": false,
+        "isExclusive": false,
+        "isBestSelling": false,
+        "isMeat": true,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "beef-bone"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Sprite Can",
+        "price": 1.50,
+        "perPrice": "325ml",
+        "description": "Sprite tastes really great when it is chilled.",
+        "rating": 4.0,
+        "quantity": 20,
+        "category": 6,
+        "isFavorite": false,
+        "isExclusive": true,
+        "isBestSelling": true,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "sprite-can"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Broiler Chicken",
+        "price": 5.99,
+        "perPrice": "1kg",
+        "description": "Broiler Chicken is a lean meat with high nutritional value, and eating it regularly will help you stay healthy.",
+        "rating": 4.5,
+        "quantity": 45,
+        "category": 3,
+        "isFavorite": false,
+        "isExclusive": false,
+        "isBestSelling": false,
+        "isMeat": true,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "broiler-chicken"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Red Bell Pepper",
+        "price": 4.99,
+        "perPrice": "1kg",
+        "description": "Red bell pepper is an excellent source of vitamin C. They are also good source of vitamin A and fiber.",
+        "rating": 3.5,
+        "quantity": 30,
+        "category": 1,
+        "isFavorite": false,
+        "isExclusive": true,
+        "isBestSelling": false,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "red-bell-pepper"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Egg Chicken Red",
+        "price": 1.80,
+        "perPrice": "180gm",
+        "description": "Eggs are rich in protein, low in calories, and they may boost the metabolism.",
+        "rating": 3.0,
+        "quantity": 25,
+        "category": 5,
+        "isFavorite": false,
+        "isExclusive": false,
+        "isBestSelling": true,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "red-egg"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Egg Chicken White",
+        "price": 1.80,
+        "perPrice": "180gm",
+        "description": "Eggs are rich in protein, low in calories, and they may boost the metabolism.",
+        "rating": 3.0,
+        "quantity": 30,
+        "category": 5,
+        "isFavorite": false,
+        "isExclusive": false,
+        "isBestSelling": false,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "white-egg"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Mayonnaise Eggless",
+        "price": 10.99,
+        "perPrice": "325ml",
+        "description": "Eggless mayonnaise is lower in total fat, saturated fat and cholesterol than regular mayonnaise.",
+        "rating": 3.5,
+        "quantity": 35,
+        "category": 5,
+        "isFavorite": false,
+        "isExclusive": false,
+        "isBestSelling": false,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "mayonnaise-eggless"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Egg Noodles",
+        "price": 6.99,
+        "perPrice": "30gm",
+        "description": "Egg Noodles are particularly high in selenium, a mineral that plays a key role in immune function. They also contain several B vitamins like thiamine, folate, niacin, and riboflavin, all of which are involved in energy production, DNA repair, and brain health.",
+        "rating": 5.0,
+        "quantity": 35,
+        "category": 5,
+        "isFavorite": false,
+        "isExclusive": true,
+        "isBestSelling": true,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "egg-noodle"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Apple & Grape Juice",
+        "price": 15.99,
+        "perPrice": "2l",
+        "description": "One small glass of Apple and Grape Juice provides about 5 percent of the total daily calorie requirement of a standard adult diet of 2,000 calories. Get one today.",
+        "rating": 4.5,
+        "quantity": 200,
+        "category": 6,
+        "isFavorite": false,
+        "isExclusive": true,
+        "isBestSelling": false,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "apple-grape-juice"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Orange Juice",
+        "price": 15.99,
+        "perPrice": "2l",
+        "description": "Orange Juice is naturally high in vital nutrients, such as vitamin C and potassium which plays a central role in immune function. It is also enriched with calcium and vitamin D.",
+        "rating": 5.0,
+        "quantity": 200,
+        "category": 6,
+        "isFavorite": false,
+        "isExclusive": false,
+        "isBestSelling": true,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "orange-juice"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Egg Pasta",
+        "price": 10.99,
+        "perPrice": "30gm",
+        "description": "Egg Pasta is particularly high in selenium, a mineral that plays a key role in immune function. It also contains several B vitamins like thiamine, folate, niacin, and riboflavin, all of which are involved in energy production, DNA repair, and brain health.",
+        "rating": 2.5,
+        "quantity": 45,
+        "category": 5,
+        "isFavorite": false,
+        "isExclusive": false,
+        "isBestSelling": false,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "egg-pasta"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Ginger",
+        "price": 3.99,
+        "perPrice": "250gm",
+        "description": "Ginger is loaded with antioxidants, compounds that prevent stress and damage to your body's DNA. They may help your body fight off chronic diseases like high blood pressure, heart disease, and diseases of the lungs, plus promote healthy aging.",
+        "rating": 5.0,
+        "quantity": 30,
+        "category": 1,
+        "isFavorite": false,
+        "isExclusive": false,
+        "isBestSelling": true,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "ginger"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Pepsi Can",
+        "price": 4.99,
+        "perPrice": "330ml",
+        "description": "It tastes pretty good when chilled, and will give you a short term energy boost.",
+        "rating": 5.0,
+        "quantity": 350,
+        "category": 6,
+        "isFavorite": false,
+        "isExclusive": false,
+        "isBestSelling": true,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "pepsi-can"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Coca Cola Can",
+        "price": 4.99,
+        "perPrice": "325ml",
+        "description": "It tastes pretty good when chilled, and will give you a short term energy boost.",
+        "rating": 5.0,
+        "quantity": 300,
+        "category": 6,
+        "isFavorite": false,
+        "isExclusive": true,
+        "isBestSelling": true,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "coca-cola-can"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Round Egg Noodles",
+        "price": 7.99,
+        "perPrice": "30gm",
+        "description": "Round Egg Noodles are particularly high in selenium, a mineral that plays a key role in immune function. They also contain several B vitamins like thiamine, folate, niacin, and riboflavin, all of which are involved in energy production, DNA repair, and brain health.",
+        "rating": 3.5,
+        "quantity": 30,
+        "category": 5,
+        "isFavorite": false,
+        "isExclusive": false,
+        "isBestSelling": false,
+        "isMeat": false,
+        "isRice": false,
+        "isPulse": false,
+        "photos": [
+            {
+                "id": 1,
+                "image": "round-egg-noodle"
+            }
+        ]
+    }
+]
