@@ -31,7 +31,7 @@ class AppColor {
   static const Color textColor = Color(0xff030303);
   static const Color mainTextColor = Color(0xff181725);
   static const Color greyColor = Color(0xff828282);
-  static const Color mainGreyTestColor = Color(0xff7c7c7c);
+  static const Color mainGreyTextColor = Color(0xff7c7c7c);
   static const Color checkBoxStrokeColor = Color(0xffb1b1b1);
   static const Color greyBackgroundColor = Color(0xfff2f3f2);
   static const Color textFieldBorderColor = Color(0xffe2e2e2);
