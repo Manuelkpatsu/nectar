@@ -6,7 +6,6 @@ const hugeStyle = TextStyle(
   fontSize: 48,
   fontWeight: FontWeight.w600,
   color: Colors.white,
-  height: 1.6,
 );
 
 const bigStyle = TextStyle(
@@ -29,5 +28,4 @@ const normalStyle = TextStyle(
 const smallStyle = TextStyle(
   fontSize: 14,
   color: Colors.white,
-  height: 0.8,
 );

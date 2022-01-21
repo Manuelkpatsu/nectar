@@ -9,6 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  logger: ^1.1.0
+  equatable: ^2.0.3
+  functional_listener: ^2.0.2
+  get_it: ^7.2.0
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
@@ -24,7 +28,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/categories/
-    - assets/images/products/
+    - assets/images/grains/
     - assets/images/groceries/
 
   fonts:
