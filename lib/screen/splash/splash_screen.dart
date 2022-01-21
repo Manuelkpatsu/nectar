@@ -3,7 +3,7 @@ import 'package:nectar/theme/app_color.dart';
 
 import 'widget/app_slogan.dart';
 import 'widget/app_title.dart';
-import 'widget/logo.dart';
+import 'widget/splash_logo.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({ Key? key }) : super(key: key);
@@ -17,7 +17,7 @@ class SplashScreen extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Logo(image: 'assets/images/logo-white.png'),
+              const SplashLogo(),
               const SizedBox(width: 15),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

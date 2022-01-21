@@ -23,7 +23,7 @@ class AppTheme {
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(19)),
           ),
-          minimumSize: const Size(double.infinity, 50), 
+          minimumSize: const Size(double.infinity, 60), 
         ),
       ),
     );

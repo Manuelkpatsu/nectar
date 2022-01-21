@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screen/splash/splash_screen.dart';
+import 'screen/onboarding/welcome_screen.dart';
 import 'theme/app_theme.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppTheme.lightTheme,
-      home: const SplashScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }
