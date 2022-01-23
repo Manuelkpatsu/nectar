@@ -42,7 +42,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           const SignUpScreenBackground(),
           SafeArea(
             child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Form(
                 key: _formKey,
                 autovalidateMode: AutovalidateMode.onUserInteraction,

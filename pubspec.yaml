@@ -13,6 +13,7 @@ dependencies:
   equatable: ^2.0.3
   functional_listener: ^2.0.2
   get_it: ^7.2.0
+  fuzzy: ^0.4.0-nullsafety.0
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
@@ -30,6 +31,12 @@ flutter:
     - assets/images/categories/
     - assets/images/grains/
     - assets/images/groceries/
+    - assets/flags/
+    - data/country.json
+    - data/category.json
+    - data/grain.json
+    - data/grocery.json
+    - data/user.json
 
   fonts:
     - family: Gilroy

@@ -26,7 +26,7 @@ class SignInInfoScreen extends StatelessWidget {
                 const SignInInfoImage(),
                 const SizedBox(height: 40),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

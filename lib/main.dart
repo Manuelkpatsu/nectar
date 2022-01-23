@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'screen/auth/sign_up/sign_up_screen.dart';
+import 'locator.dart';
+import 'screen/auth/phone/number/enter_number_screen.dart';
 import 'theme/app_theme.dart';
 
 void main() {
+  setUpLocator();
+  
   runApp(const MyApp());
 }
 
@@ -16,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppTheme.lightTheme,
-      home: const SignUpScreen(),
+      home: const EnterNumberScreen(),
     );
   }
 }
