@@ -8,6 +8,7 @@ import 'screen/auth/phone/country/select_country_notifier.dart';
 import 'screen/auth/phone/country/select_country_tile_event_handler.dart';
 import 'screen/auth/phone/number/enter_number_notifier.dart';
 import 'screen/auth/phone/otp/enter_otp_notifier.dart';
+import 'screen/store/app_entry/app_entry_notifier.dart';
 
 final GetIt get = GetIt.instance;
 
@@ -15,6 +16,11 @@ void setUpLocator() {
   get.registerFactory(() => CountryRepository());
   get.registerFactoryParam<MyAuthFlowCoordinator, BuildContext, void>(
     (context, _) => MyAuthFlowCoordinator(context),
+  );
+
+  /// AppEntryScreen
+  get.registerFactoryParam<AppEntryNotifier, BuildContext, void>(
+    (context, _) => AppEntryNotifier(),
   );
 
   /// SelectCountryScreen
