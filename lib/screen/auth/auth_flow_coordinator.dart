@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nectar/model/country.dart';
 
 import 'phone/country/select_country_screen.dart';
+import 'phone/otp/enter_otp_argument.dart';
+import 'phone/otp/enter_otp_screen.dart';
 
 abstract class AuthFlowCoordinator {
   /// Navigates to SelectCountryScreen and returns the
@@ -12,6 +14,11 @@ abstract class AuthFlowCoordinator {
   ///
   /// [selectedCountry] country selected by the user
   void closeSelectCountryScreen(Country selectedCountry);
+
+  /// Navigates to EnterOTPScreen
+  ///
+  /// [phoneNumber] phone number to verify
+  void goToEnterOTPScreen(String phoneNumber);
 }
 
 class MyAuthFlowCoordinator implements AuthFlowCoordinator {
@@ -30,6 +37,18 @@ class MyAuthFlowCoordinator implements AuthFlowCoordinator {
       _context,
       MaterialPageRoute(
         builder: (_) => const SelectCountryScreen(),
+      ),
+    );
+  }
+
+  @override
+  void goToEnterOTPScreen(String phoneNumber) {
+    final enterOTPArgument = EnterOTPArgument(phoneNumber);
+
+    Navigator.push(
+      _context,
+      MaterialPageRoute(
+        builder: (_) => EnterOTPScreen(enterOTPArgument),
       ),
     );
   }

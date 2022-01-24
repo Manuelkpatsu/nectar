@@ -7,6 +7,7 @@ import 'screen/auth/phone/country/select_country_domain_model.dart';
 import 'screen/auth/phone/country/select_country_notifier.dart';
 import 'screen/auth/phone/country/select_country_tile_event_handler.dart';
 import 'screen/auth/phone/number/enter_number_notifier.dart';
+import 'screen/auth/phone/otp/enter_otp_notifier.dart';
 
 final GetIt get = GetIt.instance;
 
@@ -30,6 +31,15 @@ void setUpLocator() {
   /// EnterNumberScreen
   get.registerFactoryParam<EnterNumberNotifier, BuildContext, void>(
     (context, _) => EnterNumberNotifier(
+      context,
+      get<MyAuthFlowCoordinator>(param1: context),
+    ),
+  );
+
+  /// EnterOTPScreen
+  get.registerFactoryParam<EnterOTPNotifier, BuildContext, void>(
+    (context, _) => EnterOTPNotifier(
+      context,
       get<MyAuthFlowCoordinator>(param1: context),
     ),
   );
