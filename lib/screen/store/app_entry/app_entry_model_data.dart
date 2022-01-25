@@ -4,7 +4,7 @@ import 'package:nectar/screen/store/account/account_screen.dart';
 import 'package:nectar/screen/store/cart/cart_screen.dart';
 import 'package:nectar/screen/store/favorite/favorite_screen.dart';
 import 'package:nectar/screen/store/home/home_screen.dart';
-import 'package:nectar/screen/store/search/search_screen.dart';
+import 'package:nectar/screen/store/search/category/caregory_screen.dart';
 
 @immutable
 class AppEntryModelData extends Equatable {
@@ -16,7 +16,7 @@ class AppEntryModelData extends Equatable {
     this.currentPageIndex = 0,
     this.screens = const [
       HomeScreen(),
-      SearchScreen(),
+      CategoryScreen(),
       CartScreen(),
       FavoriteScreen(),
       AccountScreen(),

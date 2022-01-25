@@ -47,8 +47,6 @@ class AppColor {
     brownColor,
     mauveColor,
     yellowColor,
-    lightBlueColor,
-    violetColor,
-    pinkColor,
+    lightBlueColor
   ];
 }

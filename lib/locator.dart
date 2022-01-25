@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
+import 'repository/category_repository.dart';
 import 'repository/country_repository.dart';
 import 'repository/user_repository.dart';
 import 'screen/auth/auth_flow_coordinator.dart';
@@ -11,14 +12,22 @@ import 'screen/auth/phone/number/enter_number_notifier.dart';
 import 'screen/auth/phone/otp/enter_otp_notifier.dart';
 import 'screen/store/account/account_notifier.dart';
 import 'screen/store/app_entry/app_entry_notifier.dart';
+import 'screen/store/search/category/category_domain_model.dart';
+import 'screen/store/search/category/category_notifier.dart';
+import 'screen/store/search/category/category_tile_event_handler.dart';
+import 'screen/store/store_flow_coordinator.dart';
 
 final GetIt get = GetIt.instance;
 
 void setUpLocator() {
   get.registerFactory(() => CountryRepository());
   get.registerFactory(() => UserRepository());
+  get.registerFactory(() => CategoryRepository());
   get.registerFactoryParam<MyAuthFlowCoordinator, BuildContext, void>(
     (context, _) => MyAuthFlowCoordinator(context),
+  );
+  get.registerFactoryParam<MyStoreFlowCoordinator, BuildContext, void>(
+    (context, _) => MyStoreFlowCoordinator(context),
   );
 
   /// AppEntryScreen
@@ -56,5 +65,16 @@ void setUpLocator() {
   /// AccountScreen
   get.registerFactoryParam<AccountNotifier, BuildContext, void>(
     (context, _) => AccountNotifier(get<UserRepository>()),
+  );
+
+  /// CategoryScreen
+  get.registerFactory(() => CategoryDomainModel(get<CategoryRepository>()));
+  get.registerFactoryParam<CategoryNotifier, BuildContext, void>(
+    (context, _) => CategoryNotifier(get<CategoryDomainModel>()),
+  );
+  get.registerFactoryParam<CategoryTileEventHandler, BuildContext, void>(
+    (context, _) => CategoryTileEventHandler(
+      get<MyStoreFlowCoordinator>(param1: context),
+    ),
   );
 }
