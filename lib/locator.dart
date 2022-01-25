@@ -12,6 +12,7 @@ import 'screen/auth/phone/number/enter_number_notifier.dart';
 import 'screen/auth/phone/otp/enter_otp_notifier.dart';
 import 'screen/store/account/account_notifier.dart';
 import 'screen/store/app_entry/app_entry_notifier.dart';
+import 'screen/store/home/home_notifier.dart';
 import 'screen/store/search/category/category_domain_model.dart';
 import 'screen/store/search/category/category_notifier.dart';
 import 'screen/store/search/category/category_tile_event_handler.dart';
@@ -76,5 +77,10 @@ void setUpLocator() {
     (context, _) => CategoryTileEventHandler(
       get<MyStoreFlowCoordinator>(param1: context),
     ),
+  );
+
+  /// HomeScreen
+  get.registerFactoryParam<HomeNotifier, BuildContext, void>(
+    (context, _) => HomeNotifier(),
   );
 }

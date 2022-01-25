@@ -15,6 +15,8 @@ dependencies:
   get_it: ^7.2.0
   fuzzy: ^0.4.0-nullsafety.0
   tuple: ^2.0.0
+  carousel_slider: ^4.0.0
+  dots_indicator: ^2.0.0
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
@@ -33,6 +35,7 @@ flutter:
     - assets/images/grains/
     - assets/images/groceries/
     - assets/flags/
+    - assets/images/banner/
     - data/country.json
     - data/category.json
     - data/grain.json
