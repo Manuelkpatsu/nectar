@@ -15,10 +15,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "red-app"
-            }
+            "red-apple"
         ]
     },
     {
@@ -27,7 +24,7 @@
         "price": 3.00,
         "perPrice": "7pcs",
         "description": "Banana is good for hearth health since it contains fiber, potassium, folate, and antioxidants, such as vitamin C.",
-        "rating": 5,
+        "rating": 5.0,
         "quantity": 100,
         "category": 1,
         "isFavorite": false,
@@ -37,10 +34,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "banana"
-            }
+            "banana"
         ]
     },
     {
@@ -59,10 +53,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "diet-coke"
-            }
+            "diet-coke"
         ]
     },
     {
@@ -81,10 +72,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "beef-bone"
-            }
+            "beef-bone"
         ]
     },
     {
@@ -103,10 +91,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "sprite-can"
-            }
+            "sprite-can"
         ]
     },
     {
@@ -125,10 +110,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "broiler-chicken"
-            }
+            "broiler-chicken"
         ]
     },
     {
@@ -147,10 +129,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "red-bell-pepper"
-            }
+            "red-bell-pepper"
         ]
     },
     {
@@ -169,10 +148,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "red-egg"
-            }
+            "red-egg"
         ]
     },
     {
@@ -191,10 +167,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "white-egg"
-            }
+            "white-egg"
         ]
     },
     {
@@ -213,10 +186,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "mayonnaise-eggless"
-            }
+            "mayonnaise-eggless"
         ]
     },
     {
@@ -235,10 +205,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "egg-noodle"
-            }
+            "egg-noodle"
         ]
     },
     {
@@ -257,10 +224,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "apple-grape-juice"
-            }
+            "apple-grape-juice"
         ]
     },
     {
@@ -279,10 +243,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "orange-juice"
-            }
+            "orange-juice"
         ]
     },
     {
@@ -301,10 +262,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "egg-pasta"
-            }
+            "egg-pasta"
         ]
     },
     {
@@ -323,10 +281,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "ginger"
-            }
+            "ginger"
         ]
     },
     {
@@ -345,10 +300,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "pepsi-can"
-            }
+            "pepsi-can"
         ]
     },
     {
@@ -367,10 +319,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "coca-cola-can"
-            }
+            "coca-cola-can"
         ]
     },
     {
@@ -389,10 +338,7 @@
         "isRice": false,
         "isPulse": false,
         "photos": [
-            {
-                "id": 1,
-                "image": "round-egg-noodle"
-            }
+            "round-egg-noodle"
         ]
     }
 ]

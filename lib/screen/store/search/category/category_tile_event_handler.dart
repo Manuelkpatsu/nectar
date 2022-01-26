@@ -25,7 +25,7 @@ class CategoryTileEventHandler {
     switch (event.runtimeType) {
       case GoToGrocerySearchScreenEvent:
         final grocerySearchEvent = event as GoToGrocerySearchScreenEvent;
-        _storeFlowCoordinator.goToGrocerySearchScreen(grocerySearchEvent.id);
+        _storeFlowCoordinator.goToGrocerySearchScreen(grocerySearchEvent.id, null, null);
         break;
     }
   }

@@ -8,3 +8,19 @@ class BannerChangedEvent extends HomeEvent {
 
   BannerChangedEvent(this.index);
 }
+
+@immutable
+class SeeExclusiveOfferEvent extends HomeEvent {
+  final bool isExclusive;
+
+  SeeExclusiveOfferEvent(this.isExclusive);
+}
+
+@immutable
+class SeeBestSellingEvent extends HomeEvent {
+  final bool isBestSelling;
+
+  SeeBestSellingEvent(this.isBestSelling);
+}
+
+class SeeAllGroceriesEvent extends HomeEvent {}

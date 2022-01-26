@@ -13,7 +13,7 @@ class Grocery {
   bool? isMeat;
   bool? isRice;
   bool? isPulse;
-  List<Photos>? photos;
+  List<String>? photos;
 
   Grocery({
     this.id,
@@ -48,12 +48,7 @@ class Grocery {
     isMeat = json['isMeat'];
     isRice = json['isRice'];
     isPulse = json['isPulse'];
-    if (json['photos'] != null) {
-      photos = <Photos>[];
-      json['photos'].forEach((v) {
-        photos!.add(Photos.fromJson(v));
-      });
-    }
+    photos = json['photos'].cast<String>();
   }
 
   Map<String, dynamic> toJson() {
@@ -72,28 +67,7 @@ class Grocery {
     data['isMeat'] = isMeat;
     data['isRice'] = isRice;
     data['isPulse'] = isPulse;
-    if (photos != null) {
-      data['photos'] = photos!.map((v) => v.toJson()).toList();
-    }
-    return data;
-  }
-}
-
-class Photos {
-  int? id;
-  String? image;
-
-  Photos({this.id, this.image});
-
-  Photos.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    image = json['image'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id;
-    data['image'] = image;
+    data['photos'] = photos;
     return data;
   }
 }
