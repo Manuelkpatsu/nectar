@@ -10,7 +10,6 @@ import 'widget/best_selling_header.dart';
 import 'widget/best_selling_list_view.dart';
 import 'widget/exclusive_header.dart';
 import 'widget/exclusive_list_view.dart';
-import 'widget/grains_header.dart';
 import 'widget/groceries_header.dart';
 import 'widget/groceries_list_view.dart';
 import 'widget/home_banner.dart';
@@ -71,8 +70,6 @@ class _HomeScreenState extends State<HomeScreen> {
               BestSellingListView(
                 bestSellingListenable: notifier.bestSellingGroceries,
               ),
-              const SizedBox(height: 20),
-              GrainsHeader(onPressed: () {}),
               const SizedBox(height: 20),
               GroceriesHeader(onPressed: () {
                 eventController.add(SeeAllGroceriesEvent());

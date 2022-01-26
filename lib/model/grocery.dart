@@ -10,9 +10,6 @@ class Grocery {
   bool? isFavorite;
   bool? isExclusive;
   bool? isBestSelling;
-  bool? isMeat;
-  bool? isRice;
-  bool? isPulse;
   List<String>? photos;
 
   Grocery({
@@ -27,9 +24,6 @@ class Grocery {
     this.isFavorite,
     this.isExclusive,
     this.isBestSelling,
-    this.isMeat,
-    this.isRice,
-    this.isPulse,
     this.photos,
   });
 
@@ -45,9 +39,6 @@ class Grocery {
     isFavorite = json['isFavorite'];
     isExclusive = json['isExclusive'];
     isBestSelling = json['isBestSelling'];
-    isMeat = json['isMeat'];
-    isRice = json['isRice'];
-    isPulse = json['isPulse'];
     photos = json['photos'].cast<String>();
   }
 
@@ -64,9 +55,6 @@ class Grocery {
     data['isFavorite'] = isFavorite;
     data['isExclusive'] = isExclusive;
     data['isBestSelling'] = isBestSelling;
-    data['isMeat'] = isMeat;
-    data['isRice'] = isRice;
-    data['isPulse'] = isPulse;
     data['photos'] = photos;
     return data;
   }

@@ -11,9 +11,6 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": false,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "red-apple"
         ]
@@ -30,9 +27,6 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": false,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "banana"
         ]
@@ -49,9 +43,6 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "diet-coke"
         ]
@@ -68,9 +59,6 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
-        "isMeat": true,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "beef-bone"
         ]
@@ -87,9 +75,6 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": true,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "sprite-can"
         ]
@@ -106,9 +91,6 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
-        "isMeat": true,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "broiler-chicken"
         ]
@@ -125,9 +107,6 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": false,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "red-bell-pepper"
         ]
@@ -144,9 +123,6 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": true,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "red-egg"
         ]
@@ -163,9 +139,6 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "white-egg"
         ]
@@ -182,9 +155,6 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "mayonnaise-eggless"
         ]
@@ -201,9 +171,6 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": true,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "egg-noodle"
         ]
@@ -220,9 +187,6 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": false,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "apple-grape-juice"
         ]
@@ -239,9 +203,6 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": true,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "orange-juice"
         ]
@@ -258,9 +219,6 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "egg-pasta"
         ]
@@ -277,9 +235,6 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": true,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "ginger"
         ]
@@ -296,9 +251,6 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": true,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "pepsi-can"
         ]
@@ -315,9 +267,6 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": true,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "coca-cola-can"
         ]
@@ -334,9 +283,6 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
-        "isMeat": false,
-        "isRice": false,
-        "isPulse": false,
         "photos": [
             "round-egg-noodle"
         ]

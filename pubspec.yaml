@@ -38,7 +38,6 @@ flutter:
     - assets/images/banner/
     - data/country.json
     - data/category.json
-    - data/grain.json
     - data/grocery.json
     - data/user.json
 
