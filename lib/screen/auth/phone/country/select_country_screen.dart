@@ -6,7 +6,7 @@ import '../../../../locator.dart';
 import 'select_country_event.dart';
 import 'select_country_notifier.dart';
 import 'widget/country_list.dart';
-import 'widget/search_text_field.dart';
+import '../../../store/widget/search_text_field.dart';
 import 'widget/select_country_text.dart';
 
 class SelectCountryScreen extends StatefulWidget {
@@ -48,6 +48,7 @@ class _SelectCountryScreenState extends State<SelectCountryScreen> {
           const SelectCountryText(),
           SearchTextField(
             controller: searchTextEditingController,
+            hintText: 'Search for a country',
             onPressed: () {
               if (searchTextEditingController.text.isNotEmpty) {
                 searchTextEditingController.clear();

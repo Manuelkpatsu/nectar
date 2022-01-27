@@ -10,6 +10,7 @@ import 'grocery_price.dart';
 class GroceryItem extends StatelessWidget {
   final VoidCallback? onTap;
   final VoidCallback? addToCart;
+  final double? width;
   final String image;
   final String name;
   final String perPrice;
@@ -23,6 +24,7 @@ class GroceryItem extends StatelessWidget {
     required this.name,
     required this.perPrice,
     required this.price,
+    this.width,
   }) : super(key: key);
 
   @override
@@ -30,7 +32,7 @@ class GroceryItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Ink(
-        width: 170,
+        width: width,
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(18)),

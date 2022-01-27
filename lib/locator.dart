@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:nectar/screen/store/search/grocery_search/grocery_search_arguments.dart';
 
 import 'repository/category_repository.dart';
 import 'repository/country_repository.dart';
@@ -23,6 +24,9 @@ import 'screen/store/home/home_notifier.dart';
 import 'screen/store/search/category/category_domain_model.dart';
 import 'screen/store/search/category/category_notifier.dart';
 import 'screen/store/search/category/category_tile_event_handler.dart';
+import 'screen/store/search/grocery_search/grocery_search_domain_model.dart';
+import 'screen/store/search/grocery_search/grocery_search_notifier.dart';
+import 'screen/store/search/grocery_search/grocery_search_tile_event_handler.dart';
 import 'screen/store/store_flow_coordinator.dart';
 
 final GetIt get = GetIt.instance;
@@ -117,6 +121,21 @@ void setUpLocator() {
     (context, groceryId) => GroceryNotifier(
       get<GroceryDomainModel>(),
       groceryId,
+    ),
+  );
+
+  /// GrocerySearchScreen
+  get.registerFactory(() => GrocerySearchDomainModel(get<GroceryRepository>()));
+  get.registerFactoryParam<GrocerySearchNotifier, BuildContext,
+      GrocerySearchArguments?>(
+    (context, arguments) => GrocerySearchNotifier(
+      get<GrocerySearchDomainModel>(),
+      arguments,
+    ),
+  );
+  get.registerFactoryParam<GrocerySearchTileEventHandler, BuildContext, void>(
+    (context, _) => GrocerySearchTileEventHandler(
+      get<MyStoreFlowCoordinator>(param1: context),
     ),
   );
 }

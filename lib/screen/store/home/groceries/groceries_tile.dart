@@ -24,6 +24,7 @@ class GroceriesTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 15),
       child: GroceryItem(
+        width: 170,
         onTap: () {
           eventController.add(GoToGroceryScreenEvent(modelData.grocery.id!));
         },

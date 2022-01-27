@@ -121,7 +121,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                       ),
                       const SizedBox(height: 20),
                       GroceryDescription(description: grocery.description!),
-                      Nutrients(nutrient: '100g', onTap: () {},),
+                      Nutrients(nutrient: grocery.nutrients!, onTap: () {},),
                       const AppDivider(padding: EdgeInsets.symmetric(horizontal: 16)),
                       Review(rating: grocery.rating!, onTap: () {},),
                       const SizedBox(height: 10),

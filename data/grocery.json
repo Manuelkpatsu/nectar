@@ -11,6 +11,7 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": false,
+        "nutrients": "100g",
         "photos": [
             "red-apple"
         ]
@@ -27,6 +28,7 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": false,
+        "nutrients": "50g",
         "photos": [
             "banana"
         ]
@@ -43,6 +45,7 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
+        "nutrients": "80g",
         "photos": [
             "diet-coke"
         ]
@@ -59,6 +62,7 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
+        "nutrients": "150g",
         "photos": [
             "beef-bone"
         ]
@@ -75,6 +79,7 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": true,
+        "nutrients": "60g",
         "photos": [
             "sprite-can"
         ]
@@ -91,6 +96,7 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
+        "nutrients": "70g",
         "photos": [
             "broiler-chicken"
         ]
@@ -107,6 +113,7 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": false,
+        "nutrients": "120g",
         "photos": [
             "red-bell-pepper"
         ]
@@ -123,6 +130,7 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": true,
+        "nutrients": "100g",
         "photos": [
             "red-egg"
         ]
@@ -139,6 +147,7 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
+        "nutrients": "40g",
         "photos": [
             "white-egg"
         ]
@@ -155,6 +164,7 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
+        "nutrients": "140g",
         "photos": [
             "mayonnaise-eggless"
         ]
@@ -171,6 +181,7 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": true,
+        "nutrients": "120g",
         "photos": [
             "egg-noodle"
         ]
@@ -187,6 +198,7 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": false,
+        "nutrients": "80g",
         "photos": [
             "apple-grape-juice"
         ]
@@ -203,6 +215,7 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": true,
+        "nutrients": "60g",
         "photos": [
             "orange-juice"
         ]
@@ -219,6 +232,7 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
+        "nutrients": "30g",
         "photos": [
             "egg-pasta"
         ]
@@ -235,6 +249,7 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": true,
+        "nutrients": "130g",
         "photos": [
             "ginger"
         ]
@@ -251,6 +266,7 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": true,
+        "nutrients": "40g",
         "photos": [
             "pepsi-can"
         ]
@@ -267,6 +283,7 @@
         "isFavorite": false,
         "isExclusive": true,
         "isBestSelling": true,
+        "nutrients": "80g",
         "photos": [
             "coca-cola-can"
         ]
@@ -283,6 +300,7 @@
         "isFavorite": false,
         "isExclusive": false,
         "isBestSelling": false,
+        "nutrients": "75g",
         "photos": [
             "round-egg-noodle"
         ]

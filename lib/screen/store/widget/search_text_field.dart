@@ -9,12 +9,14 @@ class SearchTextField extends StatelessWidget {
   final TextEditingController controller;
   final void Function()? onPressed;
   final ValueChanged<String>? onChanged;
+  final String hintText;
 
   const SearchTextField({
     Key? key,
     required this.controller,
     required this.onPressed,
     required this.onChanged,
+    required this.hintText,
   }) : super(key: key);
 
   @override
@@ -40,7 +42,7 @@ class SearchTextField extends StatelessWidget {
           ),
           filled: true,
           fillColor: AppColor.greyBackgroundColor,
-          hintText: 'Search for a country',
+          hintText: hintText,
           hintStyle: normalStyle.copyWith(
             color: AppColor.mainGreyTextColor,
             fontWeight: FontWeight.w600,

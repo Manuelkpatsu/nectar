@@ -4,18 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:nectar/screen/store/widget/grocery_item.dart';
 
 import '../../../../locator.dart';
-import 'best_selling_tile_event.dart';
-import 'best_selling_tile_event_handler.dart';
-import 'best_selling_tile_model_data.dart';
+import 'grocery_search_tile_event.dart';
+import 'grocery_search_tile_event_handler.dart';
+import 'grocery_search_tile_model_data.dart';
 
-class BestSellingTile extends StatelessWidget {
-  late final BestSellingTileEventHandler eventHandler;
-  final eventController = StreamController<BestSellingTileEvent>();
-  final BestSellingTileModelData modelData;
+class GrocerySearchTile extends StatelessWidget {
+  late final GrocerySearchTileEventHandler eventHandler;
+  final eventController = StreamController<GrocerySearchTileEvent>();
+  final GrocerySearchTileModelData modelData;
 
-  BestSellingTile(BuildContext context, this.modelData, {Key? key})
+  GrocerySearchTile(BuildContext context, this.modelData, {Key? key})
       : super(key: ValueKey(modelData.grocery.id)) {
-    eventHandler = get<BestSellingTileEventHandler>(param1: context);
+    eventHandler = get<GrocerySearchTileEventHandler>(param1: context);
     eventHandler.init(eventController);
   }
 
@@ -24,7 +24,6 @@ class BestSellingTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 15),
       child: GroceryItem(
-        width: 170,
         onTap: () {
           eventController.add(GoToGroceryScreenEvent(modelData.grocery.id!));
         },
