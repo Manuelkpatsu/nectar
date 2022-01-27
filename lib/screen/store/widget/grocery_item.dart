@@ -30,7 +30,7 @@ class GroceryItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Ink(
-        width: 175,
+        width: 170,
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(18)),

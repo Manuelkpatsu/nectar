@@ -16,4 +16,16 @@ class GroceryRepository {
 
     return groceryList;
   }
+
+  Future<Grocery?> getGrocery(int id) async {
+    String jsonString = await rootBundle.loadString('data/grocery.json');
+    List<dynamic> decodedJson = json.decode(jsonString);
+
+    List<Grocery> groceryList = decodedJson
+        .map((groceryJson) => Grocery.fromJson(groceryJson))
+        .where((grocery) => grocery.id == id)
+        .toList();
+
+    return groceryList[0];
+  }
 }

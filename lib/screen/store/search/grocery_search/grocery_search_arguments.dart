@@ -6,5 +6,9 @@ class GrocerySearchArguments {
   final bool? isExclusive;
   final bool? isBestSelling;
 
-  const GrocerySearchArguments(this.categoryId, this.isExclusive, this.isBestSelling);
+  const GrocerySearchArguments(
+    this.categoryId,
+    this.isExclusive,
+    this.isBestSelling,
+  );
 }

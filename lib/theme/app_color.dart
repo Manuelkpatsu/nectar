@@ -26,6 +26,7 @@ class AppColor {
   static const Color lightBlueColor = Color.fromRGBO(183, 223, 245, 0.25);
   static const Color violetColor = Color.fromRGBO(131, 106, 246, 0.15);
   static const Color pinkColor = Color.fromRGBO(215, 59, 119, 0.15);
+  static const Color dividerColor = Color.fromRGBO(226, 226, 226, 0.7);
   static const Color googleColor = Color(0xff5383ec);
   static const Color facebookColor = Color(0xff4a66ac);
   static const Color textColor = Color(0xff030303);

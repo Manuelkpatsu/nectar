@@ -42,43 +42,41 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(height: 20),
-              HomeBanner(
-                bannerListenable: notifier.banner,
-                onPageChanged: (int index, CarouselPageChangedReason reason) {
-                  eventController.add(BannerChangedEvent(index));
-                },
-              ),
-              const SizedBox(height: 30),
-              ExclusiveHeader(onPressed: () {
-                eventController.add(SeeExclusiveOfferEvent(true));
-              }),
-              const SizedBox(height: 20),
-              ExclusiveListView(
-                exclusiveGroceriesListenable: notifier.exclusiveGroceries,
-              ),
-              const SizedBox(height: 20),
-              BestSellingHeader(onPressed: () {
-                eventController.add(SeeBestSellingEvent(true));
-              }),
-              const SizedBox(height: 20),
-              BestSellingListView(
-                bestSellingListenable: notifier.bestSellingGroceries,
-              ),
-              const SizedBox(height: 20),
-              GroceriesHeader(onPressed: () {
-                eventController.add(SeeAllGroceriesEvent());
-              }),
-              const SizedBox(height: 20),
-              GroceriesListView(groceriesListenable: notifier.groceries),
-              const SizedBox(height: 20),
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 20),
+            HomeBanner(
+              bannerListenable: notifier.banner,
+              onPageChanged: (int index, CarouselPageChangedReason reason) {
+                eventController.add(BannerChangedEvent(index));
+              },
+            ),
+            const SizedBox(height: 30),
+            ExclusiveHeader(onPressed: () {
+              eventController.add(SeeExclusiveOfferEvent(true));
+            }),
+            const SizedBox(height: 20),
+            ExclusiveListView(
+              exclusiveGroceriesListenable: notifier.exclusiveGroceries,
+            ),
+            const SizedBox(height: 20),
+            BestSellingHeader(onPressed: () {
+              eventController.add(SeeBestSellingEvent(true));
+            }),
+            const SizedBox(height: 20),
+            BestSellingListView(
+              bestSellingListenable: notifier.bestSellingGroceries,
+            ),
+            const SizedBox(height: 20),
+            GroceriesHeader(onPressed: () {
+              eventController.add(SeeAllGroceriesEvent());
+            }),
+            const SizedBox(height: 20),
+            GroceriesListView(groceriesListenable: notifier.groceries),
+            const SizedBox(height: 20),
+          ],
         ),
       ),
     );

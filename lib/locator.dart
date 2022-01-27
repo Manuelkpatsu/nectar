@@ -13,6 +13,8 @@ import 'screen/auth/phone/number/enter_number_notifier.dart';
 import 'screen/auth/phone/otp/enter_otp_notifier.dart';
 import 'screen/store/account/account_notifier.dart';
 import 'screen/store/app_entry/app_entry_notifier.dart';
+import 'screen/store/grocery/grocery_domain_model.dart';
+import 'screen/store/grocery/grocery_notifier.dart';
 import 'screen/store/home/best_selling/best_selling_tile_event_handler.dart';
 import 'screen/store/home/exclusive/exclusive_tile_event_handler.dart';
 import 'screen/store/home/groceries/groceries_tile_event_handler.dart';
@@ -106,6 +108,15 @@ void setUpLocator() {
   get.registerFactoryParam<GroceriesTileEventHandler, BuildContext, void>(
     (context, _) => GroceriesTileEventHandler(
       get<MyStoreFlowCoordinator>(param1: context),
+    ),
+  );
+
+  /// GroceryScreen
+  get.registerFactory(() => GroceryDomainModel(get<GroceryRepository>()));
+  get.registerFactoryParam<GroceryNotifier, BuildContext, int>(
+    (context, groceryId) => GroceryNotifier(
+      get<GroceryDomainModel>(),
+      groceryId,
     ),
   );
 }
