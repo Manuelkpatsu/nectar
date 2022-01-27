@@ -39,9 +39,11 @@ class _AppEntryScreenState extends State<AppEntryScreen> {
       valueListenable: notifier.page,
       builder: (context, tuple, child) {
         return Scaffold(
-          body: IndexedStack(
-            index: tuple.item1,
-            children: tuple.item3,
+          body: SafeArea(
+            child: IndexedStack(
+              index: tuple.item1,
+              children: tuple.item3,
+            ),
           ),
           bottomNavigationBar: BottomNavigationBar(
             selectedItemColor: AppColor.primaryColor,

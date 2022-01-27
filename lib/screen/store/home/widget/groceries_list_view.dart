@@ -18,7 +18,7 @@ class GroceriesListView extends StatelessWidget {
       builder: (context, groceries, child) {
         if (groceries.isNotEmpty) {
           return SizedBox(
-            height: 240,
+            height: 230,
             child: ListView.builder(
               primary: false,
               shrinkWrap: true,

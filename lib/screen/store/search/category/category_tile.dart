@@ -23,25 +23,24 @@ class CategoryTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IntrinsicHeight(
-      child: InkWell(
-        onTap: () {
-          eventController.add(GoToGrocerySearchScreenEvent(modelData.id));
-        },
-        child: Ink(
-          padding: const EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.circular(18),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              CategoryImage(image: modelData.image),
-              const SizedBox(height: 30),
-              CategoryName(name: modelData.name),
-            ],
-          ),
+    return InkWell(
+      onTap: () {
+        eventController.add(GoToGrocerySearchScreenEvent(modelData.id));
+      },
+      child: Ink(
+        padding: const EdgeInsets.all(15),
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(18),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CategoryImage(image: modelData.image),
+            const SizedBox(height: 20),
+            CategoryName(name: modelData.name),
+          ],
         ),
       ),
     );

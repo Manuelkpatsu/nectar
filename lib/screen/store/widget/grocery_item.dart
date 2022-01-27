@@ -31,7 +31,7 @@ class GroceryItem extends StatelessWidget {
       onTap: onTap,
       child: Ink(
         width: 175,
-        padding: const EdgeInsets.all(18),
+        padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(18)),
           border: Border.all(width: 1, color: AppColor.textFieldBorderColor)
@@ -41,10 +41,10 @@ class GroceryItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GroceryImage(image: image),
-            const SizedBox(height: 30),
+            const SizedBox(height: 20),
             GroceryName(name: name),
             GroceryPerPrice(perPrice: perPrice),
-            const SizedBox(height: 20),
+            const SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

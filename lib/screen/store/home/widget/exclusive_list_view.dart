@@ -19,7 +19,7 @@ class ExclusiveListView extends StatelessWidget {
       builder: (context, groceries, child) {
         if (groceries.isNotEmpty) {
           return SizedBox(
-            height: 240,
+            height: 230,
             child: ListView.builder(
               shrinkWrap: true,
               primary: false,

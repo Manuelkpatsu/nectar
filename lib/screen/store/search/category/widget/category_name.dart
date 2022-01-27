@@ -9,15 +9,17 @@ class CategoryName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      name,
-      textAlign: TextAlign.center,
-      style: normalStyle.copyWith(
-        color: AppColor.mainTextColor,
-        fontWeight: FontWeight.bold,
+    return Expanded(
+      child: Text(
+        name,
+        textAlign: TextAlign.center,
+        style: normalStyle.copyWith(
+          color: AppColor.mainTextColor,
+          fontWeight: FontWeight.bold,
+        ),
+        maxLines: 2,
+        overflow: TextOverflow.ellipsis,
       ),
-      maxLines: 2,
-      overflow: TextOverflow.ellipsis,
     );
   }
 }
