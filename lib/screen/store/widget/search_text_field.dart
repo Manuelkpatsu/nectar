@@ -22,7 +22,7 @@ class SearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 16, top: 10, right: 16),
+      margin: const EdgeInsets.only(left: 16, right: 16),
       child: TextField(
         cursorColor: AppColor.primaryColor,
         controller: controller,

@@ -64,7 +64,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                     floating: false,
                     pinned: true,
                     snap: false,
-                    elevation: 0,
+                    elevation: 0.3,
                     actions: [
                       IconButton(
                         onPressed: () => eventController.add(ShareGroceryEvent()),
@@ -126,6 +126,7 @@ class _GroceryScreenState extends State<GroceryScreen> {
                       Review(rating: grocery.rating!, onTap: () {},),
                       const SizedBox(height: 10),
                       AddToBasketButton(onPressed: () {}),
+                      const SizedBox(height: 150),
                     ]),
                   )
                 ],

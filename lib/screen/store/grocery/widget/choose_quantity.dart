@@ -38,7 +38,7 @@ class ChooseQuantity extends StatelessWidget {
             ),
             const SizedBox(width: 10),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(17),
                 border: Border.all(

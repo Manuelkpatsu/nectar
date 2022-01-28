@@ -46,6 +46,7 @@ class _SelectCountryScreenState extends State<SelectCountryScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SelectCountryText(),
+          const SizedBox(height: 10),
           SearchTextField(
             controller: searchTextEditingController,
             hintText: 'Search for a country',

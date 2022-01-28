@@ -27,7 +27,7 @@ class GrocerySearchGridView extends StatelessWidget {
                   crossAxisCount: 2,
                   crossAxisSpacing: 15,
                   mainAxisSpacing: 15,
-                  childAspectRatio: 0.85,
+                  childAspectRatio: 0.70,
                 ),
                 itemCount: groceries.length,
                 itemBuilder: (context, int index) {

@@ -73,6 +73,7 @@ class _GrocerySearchScreenState extends State<GrocerySearchScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          const SizedBox(height: 10),
           SearchTextField(
             controller: searchTextEditingController,
             hintText: 'Search for grocery',

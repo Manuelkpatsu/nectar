@@ -41,6 +41,7 @@ class AppColor {
   static const Color buttonTextColor = Color(0xfffff9ff);
   static const Color redColor = Color(0xfff3603f);
   static const Color iconColor = Color(0xff181b19);
+  static const Color quantityColor = Color(0xfff0f0f0);
 
   static const List<Color> colors = [
     lightPrimaryColor,
