@@ -1,12 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:nectar/screen/store/grcoery_tile/grocery_tile.dart';
+import 'package:nectar/screen/store/grcoery_tile/grocery_tile_model_data.dart';
 import 'package:nectar/screen/widget/empty_state.dart';
 
-import '../grocery_search_tile.dart';
-import '../grocery_search_tile_model_data.dart';
-
 class GrocerySearchGridView extends StatelessWidget {
-  final ValueListenable<List<GrocerySearchTileModelData>> groceriesListenable;
+  final ValueListenable<List<GroceryTileModelData>> groceriesListenable;
 
   const GrocerySearchGridView({
     Key? key,
@@ -16,7 +15,7 @@ class GrocerySearchGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: ValueListenableBuilder<List<GrocerySearchTileModelData>>(
+      child: ValueListenableBuilder<List<GroceryTileModelData>>(
           valueListenable: groceriesListenable,
           builder: (context, groceries, child) {
             if (groceries.isNotEmpty) {
@@ -31,9 +30,9 @@ class GrocerySearchGridView extends StatelessWidget {
                 ),
                 itemCount: groceries.length,
                 itemBuilder: (context, int index) {
-                  GrocerySearchTileModelData modelData = groceries[index];
+                  GroceryTileModelData modelData = groceries[index];
 
-                  return GrocerySearchTile(context, modelData);
+                  return GroceryTile(context, modelData);
                 },
               );
             } else {

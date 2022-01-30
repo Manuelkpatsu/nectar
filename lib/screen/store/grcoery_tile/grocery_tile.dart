@@ -4,18 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:nectar/screen/store/widget/grocery_item.dart';
 
 import '../../../../locator.dart';
-import 'best_selling_tile_event.dart';
-import 'best_selling_tile_event_handler.dart';
-import 'best_selling_tile_model_data.dart';
+import 'grocery_tile_event.dart';
+import 'grocery_tile_event_handler.dart';
+import 'grocery_tile_model_data.dart';
 
-class BestSellingTile extends StatelessWidget {
-  late final BestSellingTileEventHandler eventHandler;
-  final eventController = StreamController<BestSellingTileEvent>();
-  final BestSellingTileModelData modelData;
+class GroceryTile extends StatelessWidget {
+  late final GroceryTileEventHandler eventHandler;
+  final eventController = StreamController<GroceryTileEvent>();
+  final GroceryTileModelData modelData;
 
-  BestSellingTile(BuildContext context, this.modelData, {Key? key})
+  GroceryTile(BuildContext context, this.modelData, {Key? key})
       : super(key: ValueKey(modelData.grocery.id)) {
-    eventHandler = get<BestSellingTileEventHandler>(param1: context);
+    eventHandler = get<GroceryTileEventHandler>(param1: context);
     eventHandler.init(eventController);
   }
 

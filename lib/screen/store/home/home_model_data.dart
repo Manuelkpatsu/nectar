@@ -1,9 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:nectar/screen/store/grcoery_tile/grocery_tile_model_data.dart';
 
-import 'best_selling/best_selling_tile_model_data.dart';
-import 'exclusive/exclusive_tile_model_data.dart';
-import 'groceries/groceries_tile_model_data.dart';
 import 'widget/banner_content_one.dart';
 import 'widget/banner_content_two.dart';
 
@@ -11,9 +9,9 @@ import 'widget/banner_content_two.dart';
 class HomeModelData extends Equatable {
   final List<Widget> bannerItems;
   final int currentBannerIndex;
-  final List<BestSellingTileModelData> bestSellingGroceries;
-  final List<ExclusiveTileModelData> exclusiveGroceries;
-  final List<GroceriesTileModelData> groceries;
+  final List<GroceryTileModelData> bestSellingGroceries;
+  final List<GroceryTileModelData> exclusiveGroceries;
+  final List<GroceryTileModelData> groceries;
 
   const HomeModelData({
     this.bannerItems = const [
@@ -29,9 +27,9 @@ class HomeModelData extends Equatable {
   HomeModelData copyWith({
     List<Widget>? bannerItems,
     int? currentBannerIndex,
-    List<BestSellingTileModelData>? bestSellingGroceries,
-    List<ExclusiveTileModelData>? exclusiveGroceries,
-    List<GroceriesTileModelData>? groceries,
+    List<GroceryTileModelData>? bestSellingGroceries,
+    List<GroceryTileModelData>? exclusiveGroceries,
+    List<GroceryTileModelData>? groceries,
   }) {
     return HomeModelData(
       bannerItems: bannerItems ?? this.bannerItems,

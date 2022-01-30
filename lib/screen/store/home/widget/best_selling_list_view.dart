@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:nectar/screen/store/home/best_selling/best_selling_tile.dart';
-import 'package:nectar/screen/store/home/best_selling/best_selling_tile_model_data.dart';
+import 'package:nectar/screen/store/grcoery_tile/grocery_tile.dart';
+import 'package:nectar/screen/store/grcoery_tile/grocery_tile_model_data.dart';
 
 class BestSellingListView extends StatelessWidget {
-  final ValueListenable<List<BestSellingTileModelData>> bestSellingListenable;
+  final ValueListenable<List<GroceryTileModelData>> bestSellingListenable;
 
   const BestSellingListView({
     Key? key,
@@ -13,7 +13,7 @@ class BestSellingListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder<List<BestSellingTileModelData>>(
+    return ValueListenableBuilder<List<GroceryTileModelData>>(
       valueListenable: bestSellingListenable,
       builder: (context, groceries, child) {
         if (groceries.isNotEmpty) {
@@ -26,9 +26,9 @@ class BestSellingListView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16),
               itemCount: 3,
               itemBuilder: (context, index) {
-                BestSellingTileModelData modelData = groceries[index];
+                GroceryTileModelData modelData = groceries[index];
           
-                return BestSellingTile(context, modelData);
+                return GroceryTile(context, modelData);
               },
             ),
           );

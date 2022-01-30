@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:nectar/screen/store/home/exclusive/exclusive_tile.dart';
-import 'package:nectar/screen/store/home/exclusive/exclusive_tile_model_data.dart';
+import 'package:nectar/screen/store/grcoery_tile/grocery_tile.dart';
+import 'package:nectar/screen/store/grcoery_tile/grocery_tile_model_data.dart';
 
 class ExclusiveListView extends StatelessWidget {
-  final ValueListenable<List<ExclusiveTileModelData>>
+  final ValueListenable<List<GroceryTileModelData>>
       exclusiveGroceriesListenable;
 
   const ExclusiveListView({
@@ -14,7 +14,7 @@ class ExclusiveListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder<List<ExclusiveTileModelData>>(
+    return ValueListenableBuilder<List<GroceryTileModelData>>(
       valueListenable: exclusiveGroceriesListenable,
       builder: (context, groceries, child) {
         if (groceries.isNotEmpty) {
@@ -27,9 +27,9 @@ class ExclusiveListView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16),
               itemCount: 3,
               itemBuilder: (context, index) {
-                ExclusiveTileModelData modelData = groceries[index];
+                GroceryTileModelData modelData = groceries[index];
           
-                return ExclusiveTile(context, modelData);
+                return GroceryTile(context, modelData);
               },
             ),
           );

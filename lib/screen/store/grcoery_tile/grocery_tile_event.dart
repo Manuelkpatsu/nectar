@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-abstract class GroceriesTileEvent {}
+abstract class GroceryTileEvent {}
 
 @immutable
-class GoToGroceryScreenEvent extends GroceriesTileEvent {
+class GoToGroceryScreenEvent extends GroceryTileEvent {
   final int id;
 
   GoToGroceryScreenEvent(this.id);

@@ -2,10 +2,8 @@ import 'dart:async';
 
 import 'package:nectar/model/grocery.dart';
 import 'package:nectar/repository/grocery_repository.dart';
+import 'package:nectar/screen/store/grcoery_tile/grocery_tile_model_data.dart';
 
-import 'best_selling/best_selling_tile_model_data.dart';
-import 'exclusive/exclusive_tile_model_data.dart';
-import 'groceries/groceries_tile_model_data.dart';
 import 'home_model_data.dart';
 
 class HomeDomainModel {
@@ -23,18 +21,18 @@ class HomeDomainModel {
 
   void _refreshData() {
     _groceryRepository.getGroceries().then((groceries) {
-      List<BestSellingTileModelData> bestSellingList = groceries
+      List<GroceryTileModelData> bestSellingList = groceries
           .where((grocery) => grocery.isBestSelling == true)
-          .map((grocery) => _bestSellingToTileModelData(grocery))
+          .map((grocery) => _groceryToTileModelData(grocery))
           .toList();
 
-      List<ExclusiveTileModelData> exclusiveList = groceries
+      List<GroceryTileModelData> exclusiveList = groceries
           .where((grocery) => grocery.isExclusive == true)
-          .map((grocery) => _exclusiveToTileModelData(grocery))
+          .map((grocery) => _groceryToTileModelData(grocery))
           .toList();
 
-      List<GroceriesTileModelData> allGroceryList = groceries
-          .map((grocery) => _groceriesToTileModelData(grocery))
+      List<GroceryTileModelData> allGroceryList = groceries
+          .map((grocery) => _groceryToTileModelData(grocery))
           .toList();
 
       _groceriesController.add(HomeModelData(
@@ -45,16 +43,8 @@ class HomeDomainModel {
     });
   }
 
-  BestSellingTileModelData _bestSellingToTileModelData(Grocery grocery) {
-    return BestSellingTileModelData(grocery: grocery);
-  }
-
-  ExclusiveTileModelData _exclusiveToTileModelData(Grocery grocery) {
-    return ExclusiveTileModelData(grocery: grocery);
-  }
-
-  GroceriesTileModelData _groceriesToTileModelData(Grocery grocery) {
-    return GroceriesTileModelData(grocery: grocery);
+  GroceryTileModelData _groceryToTileModelData(Grocery grocery) {
+    return GroceryTileModelData(grocery: grocery);
   }
 
   void dispose() {

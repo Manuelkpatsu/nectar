@@ -2,17 +2,17 @@ import 'dart:async';
 
 import 'package:logger/logger.dart';
 
-import '../../store_flow_coordinator.dart';
-import 'groceries_tile_event.dart';
+import '../store_flow_coordinator.dart';
+import 'grocery_tile_event.dart';
 
-class GroceriesTileEventHandler {
+class GroceryTileEventHandler {
   final _logger = Logger();
   final StoreFlowCoordinator _storeFlowCoordinator;
-  late final StreamController<GroceriesTileEvent> _eventController;
+  late final StreamController<GroceryTileEvent> _eventController;
 
-  GroceriesTileEventHandler(this._storeFlowCoordinator);
+  GroceryTileEventHandler(this._storeFlowCoordinator);
 
-  void init(StreamController<GroceriesTileEvent> eventController) {
+  void init(StreamController<GroceryTileEvent> eventController) {
     _eventController = eventController;
 
     _eventController.stream
@@ -20,8 +20,8 @@ class GroceriesTileEventHandler {
         .onError((error) => _logger.e("Error responding to event", error));
   }
 
-  /// Handles [GroceriesTileEvent]
-  _handleEvent(GroceriesTileEvent event) {
+  /// Handles [GroceryTileEvent]
+  _handleEvent(GroceryTileEvent event) {
     switch (event.runtimeType) {
       case GoToGroceryScreenEvent:
         final groceryEvent = event as GoToGroceryScreenEvent;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:nectar/screen/store/grcoery_tile/grocery_tile_event_handler.dart';
 import 'package:nectar/screen/store/search/grocery_search/grocery_search_arguments.dart';
 
 import 'repository/category_repository.dart';
@@ -16,9 +17,6 @@ import 'screen/store/account/account_notifier.dart';
 import 'screen/store/app_entry/app_entry_notifier.dart';
 import 'screen/store/grocery/grocery_domain_model.dart';
 import 'screen/store/grocery/grocery_notifier.dart';
-import 'screen/store/home/best_selling/best_selling_tile_event_handler.dart';
-import 'screen/store/home/exclusive/exclusive_tile_event_handler.dart';
-import 'screen/store/home/groceries/groceries_tile_event_handler.dart';
 import 'screen/store/home/home_domain_model.dart';
 import 'screen/store/home/home_notifier.dart';
 import 'screen/store/search/category/category_domain_model.dart';
@@ -26,7 +24,6 @@ import 'screen/store/search/category/category_notifier.dart';
 import 'screen/store/search/category/category_tile_event_handler.dart';
 import 'screen/store/search/grocery_search/grocery_search_domain_model.dart';
 import 'screen/store/search/grocery_search/grocery_search_notifier.dart';
-import 'screen/store/search/grocery_search/grocery_search_tile_event_handler.dart';
 import 'screen/store/store_flow_coordinator.dart';
 
 final GetIt get = GetIt.instance;
@@ -91,26 +88,18 @@ void setUpLocator() {
     ),
   );
 
+  /// GroceryTile
+  get.registerFactoryParam<GroceryTileEventHandler, BuildContext, void>(
+    (context, _) => GroceryTileEventHandler(
+      get<MyStoreFlowCoordinator>(param1: context),
+    ),
+  );
+
   /// HomeScreen
   get.registerFactory(() => HomeDomainModel(get<GroceryRepository>()));
   get.registerFactoryParam<HomeNotifier, BuildContext, void>(
     (context, _) => HomeNotifier(
       get<HomeDomainModel>(),
-      get<MyStoreFlowCoordinator>(param1: context),
-    ),
-  );
-  get.registerFactoryParam<BestSellingTileEventHandler, BuildContext, void>(
-    (context, _) => BestSellingTileEventHandler(
-      get<MyStoreFlowCoordinator>(param1: context),
-    ),
-  );
-  get.registerFactoryParam<ExclusiveTileEventHandler, BuildContext, void>(
-    (context, _) => ExclusiveTileEventHandler(
-      get<MyStoreFlowCoordinator>(param1: context),
-    ),
-  );
-  get.registerFactoryParam<GroceriesTileEventHandler, BuildContext, void>(
-    (context, _) => GroceriesTileEventHandler(
       get<MyStoreFlowCoordinator>(param1: context),
     ),
   );
@@ -131,11 +120,6 @@ void setUpLocator() {
     (context, arguments) => GrocerySearchNotifier(
       get<GrocerySearchDomainModel>(),
       arguments,
-    ),
-  );
-  get.registerFactoryParam<GrocerySearchTileEventHandler, BuildContext, void>(
-    (context, _) => GrocerySearchTileEventHandler(
-      get<MyStoreFlowCoordinator>(param1: context),
     ),
   );
 }

@@ -3,18 +3,18 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:fuzzy/fuzzy.dart';
 import 'package:logger/logger.dart';
+import 'package:nectar/screen/store/grcoery_tile/grocery_tile_model_data.dart';
 
 import 'grocery_search_arguments.dart';
 import 'grocery_search_domain_model.dart';
 import 'grocery_search_event.dart';
-import 'grocery_search_tile_model_data.dart';
 
 class GrocerySearchNotifier
-    extends ValueNotifier<List<GrocerySearchTileModelData>> {
+    extends ValueNotifier<List<GroceryTileModelData>> {
   final _logger = Logger();
   final GrocerySearchDomainModel _grocerySearchDomainModel;
   final GrocerySearchArguments? _argumnets;
-  List<GrocerySearchTileModelData> _groceries = [];
+  List<GroceryTileModelData> _groceries = [];
   late final StreamController<GrocerySearchEvent> _eventController;
 
   GrocerySearchNotifier(this._grocerySearchDomainModel, this._argumnets) : super([]);
@@ -50,7 +50,7 @@ class GrocerySearchNotifier
   /// Searches the grocery list and returns
   /// groceries that match the [searchQuery]
   void _search(String searchQuery) {
-    final fuse = Fuzzy<GrocerySearchTileModelData>(
+    final fuse = Fuzzy<GroceryTileModelData>(
       _groceries,
       options: FuzzyOptions(
         threshold: 0.2,
