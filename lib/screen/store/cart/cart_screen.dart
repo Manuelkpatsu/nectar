@@ -21,13 +21,14 @@ class _CartScreenState extends State<CartScreen> {
         title: const CartTitle(),
         centerTitle: true,
         elevation: 0.3,
+        automaticallyImplyLeading: false,
       ),
       body: Column(
         children: [
           const CartListView(),
           const AppDivider(color: AppColor.textFieldBorderColor),
           const SizedBox(height: 20),
-          GoToCheckoutButton(onPressed: () {}, total: 48.64,),
+          GoToCheckoutButton(onPressed: () {}, total: 39.84,),
           const SizedBox(height: 20),
         ],
       ),

@@ -14,7 +14,11 @@ class AddToCartButton extends StatelessWidget {
       onPressed: onPressed,
       child: const Icon(Icons.add),
       style: ElevatedButton.styleFrom(
-        minimumSize: const Size(45, 45)
+        minimumSize: const Size(40, 40),
+        padding: const EdgeInsets.all(8),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(17),
+        ),
       ),
     );
   }

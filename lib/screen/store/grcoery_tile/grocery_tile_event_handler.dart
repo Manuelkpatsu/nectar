@@ -27,6 +27,8 @@ class GroceryTileEventHandler {
         final groceryEvent = event as GoToGroceryScreenEvent;
         _storeFlowCoordinator.goToGroceryScreen(groceryEvent.id);
         break;
+      case ToggleFavoriteEvent:
+        break;
     }
   }
 

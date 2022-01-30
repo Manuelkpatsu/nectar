@@ -8,11 +8,16 @@ import 'repository/country_repository.dart';
 import 'repository/grocery_repository.dart';
 import 'repository/user_repository.dart';
 import 'screen/auth/auth_flow_coordinator.dart';
+import 'screen/auth/onboarding/welcome_notifier.dart';
 import 'screen/auth/phone/country/select_country_domain_model.dart';
 import 'screen/auth/phone/country/select_country_notifier.dart';
 import 'screen/auth/phone/country/select_country_tile_event_handler.dart';
 import 'screen/auth/phone/number/enter_number_notifier.dart';
 import 'screen/auth/phone/otp/enter_otp_notifier.dart';
+import 'screen/auth/sign_in/sign_in_notifier.dart';
+import 'screen/auth/sign_in_info/sign_in_info_notifier.dart';
+import 'screen/auth/sign_up/sign_up_notifier.dart';
+import 'screen/auth/splash/splash_notifier.dart';
 import 'screen/store/account/account_notifier.dart';
 import 'screen/store/app_entry/app_entry_notifier.dart';
 import 'screen/store/grocery/grocery_domain_model.dart';
@@ -45,6 +50,43 @@ void setUpLocator() {
     (context, _) => AppEntryNotifier(),
   );
 
+  // SplashScreen
+  get.registerFactoryParam<SplashNotifier, BuildContext, void>(
+    (context, _) => SplashNotifier(
+      get<MyAuthFlowCoordinator>(param1: context),
+    ),
+  );
+
+  // WelcomeScreen
+  get.registerFactoryParam<WelcomeNotifier, BuildContext, void>(
+    (context, _) => WelcomeNotifier(
+      get<MyAuthFlowCoordinator>(param1: context),
+    ),
+  );
+
+  // SignInInfoScreen
+  get.registerFactoryParam<SignInInfoNotifier, BuildContext, void>(
+    (context, _) => SignInInfoNotifier(
+      get<MyAuthFlowCoordinator>(param1: context),
+    ),
+  );
+
+  // SignInScreen
+  get.registerFactoryParam<SignInNotifier, BuildContext, void>(
+    (context, _) => SignInNotifier(
+      context,
+      get<MyAuthFlowCoordinator>(param1: context),
+    ),
+  );
+
+  // SignUpScreen
+  get.registerFactoryParam<SignUpNotifier, BuildContext, void>(
+    (context, _) => SignUpNotifier(
+      context,
+      get<MyAuthFlowCoordinator>(param1: context),
+    ),
+  );
+
   /// SelectCountryScreen
   get.registerFactory(() => SelectCountryDomainModel(get<CountryRepository>()));
   get.registerFactoryParam<SelectCountryNotifier, BuildContext, void>(
@@ -74,7 +116,10 @@ void setUpLocator() {
 
   /// AccountScreen
   get.registerFactoryParam<AccountNotifier, BuildContext, void>(
-    (context, _) => AccountNotifier(get<UserRepository>()),
+    (context, _) => AccountNotifier(
+      get<UserRepository>(),
+      get<MyStoreFlowCoordinator>(param1: context),
+    ),
   );
 
   /// CategoryScreen

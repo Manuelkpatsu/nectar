@@ -23,7 +23,7 @@ class IncrementDecrementButton extends StatelessWidget {
         size: 30,
         color: color,
       ),
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(8),
       constraints: const BoxConstraints(minWidth: 40, minHeight: 40),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(17),

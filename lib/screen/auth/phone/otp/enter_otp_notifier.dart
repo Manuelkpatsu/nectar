@@ -52,7 +52,7 @@ class EnterOTPNotifier extends ValueNotifier<EnterOTPModelData> {
 
   void _signInWithSMSCode(String smsCode) {
     if (smsCode.isNotEmpty) {
-      Util.showSnackbar(_context, 'Successfull');
+      _authFlowCoordinator.goToAppEntryScreen();
     } else {
       Util.showSnackbar(_context, 'OTP code cannot be empty.');
     }

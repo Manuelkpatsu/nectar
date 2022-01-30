@@ -21,6 +21,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
         title: const FavoriteTitle(),
         centerTitle: true,
         elevation: 0.3,
+        automaticallyImplyLeading: false,
       ),
       body: Column(
         children: [

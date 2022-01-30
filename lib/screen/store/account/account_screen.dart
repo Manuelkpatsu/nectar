@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:nectar/theme/app_color.dart';
 
 import '../../../locator.dart';
+import 'account_event.dart';
 import 'account_notifier.dart';
 import 'account_listenable.dart';
 import 'widget/about.dart';
@@ -24,13 +27,14 @@ class AccountScreen extends StatefulWidget {
 }
 
 class _AccountScreenState extends State<AccountScreen> {
+  final eventController = StreamController<AccountEvent>();
   late final AccountNotifier notifier;
 
   @override
   void initState() {
     super.initState();
     notifier = get<AccountNotifier>(param1: context);
-    notifier.init();
+    notifier.init(eventController);
   }
 
   @override
@@ -45,6 +49,7 @@ class _AccountScreenState extends State<AccountScreen> {
       appBar: AppBar(
         toolbarHeight: 90,
         elevation: 0.5,
+        automaticallyImplyLeading: false,
         title: Row(
           children: [
             ProfileImage(imageListenable: notifier.photo),
@@ -77,7 +82,9 @@ class _AccountScreenState extends State<AccountScreen> {
               ).toList(),
             ),
           ),
-          LogoutButton(onPressed: () {}),
+          LogoutButton(onPressed: () {
+            eventController.add(LogoutEvent());
+          }),
         ],
       ),
     );

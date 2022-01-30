@@ -8,3 +8,10 @@ class GoToGroceryScreenEvent extends GroceryTileEvent {
 
   GoToGroceryScreenEvent(this.id);
 }
+
+@immutable
+class ToggleFavoriteEvent extends GroceryTileEvent {
+  final bool isFavorite;
+
+  ToggleFavoriteEvent(this.isFavorite);
+}

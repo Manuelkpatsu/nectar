@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nectar/screen/auth/sign_in_info/sign_in_info_screen.dart';
 import 'package:nectar/screen/store/search/grocery_search/grocery_search_arguments.dart';
 
 import 'grocery/grocery_argument.dart';
@@ -24,6 +25,9 @@ abstract class StoreFlowCoordinator {
   ///
   /// no param is passed since it fetches all groceries
   void goToViewAllGrocerySearchScreen();
+
+  /// Navigates to SignInInfoScreen
+  void goToSignInInfoScreen();
 }
 
 class MyStoreFlowCoordinator implements StoreFlowCoordinator {
@@ -67,6 +71,17 @@ class MyStoreFlowCoordinator implements StoreFlowCoordinator {
       MaterialPageRoute(
         builder: (_) => const GrocerySearchScreen(null),
       ),
+    );
+  }
+
+  @override
+  void goToSignInInfoScreen() {
+    Navigator.pushAndRemoveUntil(
+      _context,
+      MaterialPageRoute(
+        builder: (_) => const SignInInfoScreen(),
+      ),
+      (route) => false,
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'locator.dart';
-import 'screen/store/app_entry/app_entry_screen.dart';
+import 'screen/auth/splash/splash_screen.dart';
 import 'theme/app_theme.dart';
 
 void main() {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppTheme.lightTheme,
-      home: const AppEntryScreen(),
+      home: const SplashScreen(),
     );
   }
 }

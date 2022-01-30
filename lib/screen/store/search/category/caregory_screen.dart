@@ -35,6 +35,8 @@ class _CategoryScreenState extends State<CategoryScreen> {
       appBar: AppBar(
         title: const CategoryTitleText(),
         centerTitle: true,
+        automaticallyImplyLeading: false,
+        elevation: 0.3,
       ),
       body: CategoryGridView(categoriesListenable: notifier.categories),
     );

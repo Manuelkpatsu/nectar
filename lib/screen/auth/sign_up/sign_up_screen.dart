@@ -1,5 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
+import '../../../locator.dart';
+import 'sign_up_event.dart';
+import 'sign_up_notifier.dart';
 import 'widget/full_name_text_field.dart';
 import 'widget/login.dart';
 import 'widget/register_email_text_field.dart';
@@ -24,12 +29,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   bool _showPassword = true;
+  final eventController = StreamController<SignUpEvent>();
+  late final SignUpNotifier notifier;
+
+  @override
+  void initState() {
+    notifier = get<SignUpNotifier>(param1: context);
+    notifier.init(eventController);
+    super.initState();
+  }
 
   @override
   void dispose() {
     _fullNameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
+    notifier.dispose();
     super.dispose();
   }
 
@@ -68,17 +83,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     const SizedBox(height: 20),
                     TermsPolicy(
-                      onTapTerms: () {},
-                      onTapPolicy: () {},
+                      onTapTerms: () {
+                        eventController.add(TermsEvent());
+                      },
+                      onTapPolicy: () {
+                        eventController.add(PolicyEvent());
+                      },
                     ),
                     const SizedBox(height: 30),
                     SignUpButton(onPressed: () {
                       if (_formKey.currentState!.validate()) {
+                        eventController.add(GoToHomeScreenEvent(
+                          _fullNameController.text.trim(),
+                          _emailController.text.trim(),
+                          _passwordController.text.trim(),
+                        ));
                         _formKey.currentState!.reset();
                       }
                     }),
                     const SizedBox(height: 25),
-                    Login(onTap: () {}),
+                    Login(onTap: () {
+                      eventController.add(LoginEvent());
+                    }),
                     const SizedBox(height: 30),
                   ],
                 ),
