@@ -36,41 +36,49 @@ A [@nuel_nartey](https://twitter.com/nuel_nartey) Flutter Showcase project.
     <td>
       <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/6.png" />
     </td>
-    <td>
-      <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/7.png" />
-    </td>
-    <td>
-      <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/8.png" />
-    </td>
-    <td>
-      <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/9.png" />
-    </td>
-    <td>
-      <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/10.png" />
-    </td>
-    <td>
-      <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/11.png" />
-    </td>
-    <td>
-      <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/12.png" />
-    </td>
-    <td>
-      <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/13.png" />
-    </td>
-    <td>
-      <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/14.png" />
-    </td>
-    <td>
-      <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/15.png" />
-    </td>
-    <td>
-      <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/16.png" />
-    </td>
-    <td>
-      <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/17.png" />
-    </td>
-    <td>
-      <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/18.png" />
-    </td>
   </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/7.png" />
+        </td>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/8.png" />
+        </td>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/9.png" />
+        </td>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/10.png" />
+        </td>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/11.png" />
+        </td>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/12.png" />
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/13.png" />
+        </td>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/14.png" />
+        </td>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/15.png" />
+        </td>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/16.png" />
+        </td>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/17.png" />
+        </td>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/nectar/blob/main/screenshots/18.png" />
+        </td>
+    </tr>
 </table>
