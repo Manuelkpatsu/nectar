@@ -28,29 +28,25 @@ class CartNotifier extends ValueNotifier {
   /// Handles [CartEvent]
   void _handleEvent(CartEvent event) {
     if (event is CheckoutEvent) {
-      // _storeFlowCoordinator.showSelectCheckoutOptionsSheet().then((checkoutOption) {
-      //   if (checkoutOption == CheckoutOption.order) {
-      //     _storeFlowCoordinator.goToOrderAcceptedScreen();
-      //   } else if (checkoutOption == CheckoutOption.conditions) {
-
-      //   } else if (checkoutOption == CheckoutOption.delivery) {
-
-      //   } else if (checkoutOption == CheckoutOption.payment) {
-
-      //   } else if (checkoutOption == CheckoutOption.promo) {
-
-      //   } else if (checkoutOption == CheckoutOption.terms) {
-
-      //   }
-      // });
-
       _storeFlowCoordinator
-          .showOrderErrorOptionsDialog()
-          .then((orderErrorOption) {
-        if (orderErrorOption == OrderErrorOption.tryAgain) {
-        } else if (orderErrorOption == OrderErrorOption.backToHome) {
-          _storeFlowCoordinator.goToHomeScreen();
-        }
+          .showSelectCheckoutOptionsSheet()
+          .then((checkoutOption) {
+        if (checkoutOption == CheckoutOption.order) {
+          // _storeFlowCoordinator.goToOrderAcceptedScreen();
+
+          _storeFlowCoordinator
+              .showOrderErrorOptionsDialog()
+              .then((orderErrorOption) {
+            if (orderErrorOption == OrderErrorOption.tryAgain) {
+            } else if (orderErrorOption == OrderErrorOption.backToHome) {
+              _storeFlowCoordinator.goToHomeScreen();
+            }
+          });
+        } else if (checkoutOption == CheckoutOption.conditions) {
+        } else if (checkoutOption == CheckoutOption.delivery) {
+        } else if (checkoutOption == CheckoutOption.payment) {
+        } else if (checkoutOption == CheckoutOption.promo) {
+        } else if (checkoutOption == CheckoutOption.terms) {}
       });
     }
   }
