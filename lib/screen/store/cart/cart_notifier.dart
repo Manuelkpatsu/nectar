@@ -10,8 +10,10 @@ class CartNotifier extends ValueNotifier {
   final _logger = Logger();
   final StoreFlowCoordinator _storeFlowCoordinator;
   late final StreamController<CartEvent> _eventController;
-  
-  CartNotifier(this._storeFlowCoordinator,) : super(null);
+
+  CartNotifier(
+    this._storeFlowCoordinator,
+  ) : super(null);
 
   void init(StreamController<CartEvent> eventController) {
     _eventController = eventController;
@@ -26,19 +28,28 @@ class CartNotifier extends ValueNotifier {
   /// Handles [CartEvent]
   void _handleEvent(CartEvent event) {
     if (event is CheckoutEvent) {
-      _storeFlowCoordinator.showSelectCheckoutOptionsSheet().then((checkoutOption) {
-        if (checkoutOption == CheckoutOption.order) {
-          _storeFlowCoordinator.goToOrderAcceptedScreen();
-        } else if (checkoutOption == CheckoutOption.conditions) {
+      // _storeFlowCoordinator.showSelectCheckoutOptionsSheet().then((checkoutOption) {
+      //   if (checkoutOption == CheckoutOption.order) {
+      //     _storeFlowCoordinator.goToOrderAcceptedScreen();
+      //   } else if (checkoutOption == CheckoutOption.conditions) {
 
-        } else if (checkoutOption == CheckoutOption.delivery) {
+      //   } else if (checkoutOption == CheckoutOption.delivery) {
 
-        } else if (checkoutOption == CheckoutOption.payment) {
+      //   } else if (checkoutOption == CheckoutOption.payment) {
 
-        } else if (checkoutOption == CheckoutOption.promo) {
+      //   } else if (checkoutOption == CheckoutOption.promo) {
 
-        } else if (checkoutOption == CheckoutOption.terms) {
+      //   } else if (checkoutOption == CheckoutOption.terms) {
 
+      //   }
+      // });
+
+      _storeFlowCoordinator
+          .showOrderErrorOptionsDialog()
+          .then((orderErrorOption) {
+        if (orderErrorOption == OrderErrorOption.tryAgain) {
+        } else if (orderErrorOption == OrderErrorOption.backToHome) {
+          _storeFlowCoordinator.goToHomeScreen();
         }
       });
     }

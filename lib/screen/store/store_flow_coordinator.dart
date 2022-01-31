@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nectar/screen/auth/sign_in_info/sign_in_info_screen.dart';
+import 'package:nectar/screen/store/cart/widget/order_error_dialog.dart';
 import 'package:nectar/screen/store/order_accepted/order_accepted_screen.dart';
 import 'package:nectar/screen/store/search/grocery_search/grocery_search_arguments.dart';
 
@@ -40,6 +41,9 @@ abstract class StoreFlowCoordinator {
 
   /// Navigates to AppEntryScreen
   void goToHomeScreen();
+
+  /// Shows [OrderErrorDialog]
+  Future<OrderErrorOption?> showOrderErrorOptionsDialog();
 }
 
 class MyStoreFlowCoordinator implements StoreFlowCoordinator {
@@ -110,7 +114,8 @@ class MyStoreFlowCoordinator implements StoreFlowCoordinator {
       builder: (_) => CheckoutSheet(
         onCloseCheckout: () => Navigator.pop(_context),
         onDeliveryTap: () => Navigator.pop(_context, CheckoutOption.delivery),
-        onConditionsTap: () => Navigator.pop(_context, CheckoutOption.conditions),
+        onConditionsTap: () =>
+            Navigator.pop(_context, CheckoutOption.conditions),
         onPaymentTap: () => Navigator.pop(_context, CheckoutOption.payment),
         onPlaceOrderTap: () => Navigator.pop(_context, CheckoutOption.order),
         onPromoCodeTap: () => Navigator.pop(_context, CheckoutOption.promo),
@@ -139,6 +144,19 @@ class MyStoreFlowCoordinator implements StoreFlowCoordinator {
       (route) => false,
     );
   }
+
+  @override
+  Future<OrderErrorOption?> showOrderErrorOptionsDialog() {
+    return showDialog<OrderErrorOption>(
+      context: _context,
+      builder: (_) => OrderErrorDialog(
+        onCloseTap: () => Navigator.pop(_context),
+        onTryAgainTap: () => Navigator.pop(_context, OrderErrorOption.tryAgain),
+        onBackToHomeTap: () =>
+            Navigator.pop(_context, OrderErrorOption.backToHome),
+      ),
+    );
+  }
 }
 
 /// Specifies the checkout option type to be picked.
@@ -150,3 +168,6 @@ enum CheckoutOption {
   terms,
   conditions,
 }
+
+/// Specifies the order error option type to be picked.
+enum OrderErrorOption { tryAgain, backToHome }
