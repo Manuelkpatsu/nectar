@@ -3,6 +3,7 @@ import 'package:nectar/screen/auth/sign_in_info/sign_in_info_screen.dart';
 import 'package:nectar/screen/store/order_accepted/order_accepted_screen.dart';
 import 'package:nectar/screen/store/search/grocery_search/grocery_search_arguments.dart';
 
+import 'app_entry/app_entry_screen.dart';
 import 'cart/widget/checkout_sheet.dart';
 import 'grocery/grocery_argument.dart';
 import 'grocery/grocery_screen.dart';
@@ -36,6 +37,9 @@ abstract class StoreFlowCoordinator {
 
   /// Navigates to SignInInfoScreen
   void goToOrderAcceptedScreen();
+
+  /// Navigates to AppEntryScreen
+  void goToHomeScreen();
 }
 
 class MyStoreFlowCoordinator implements StoreFlowCoordinator {
@@ -122,6 +126,17 @@ class MyStoreFlowCoordinator implements StoreFlowCoordinator {
       MaterialPageRoute(
         builder: (_) => const OrderAcceptedScreen(),
       ),
+    );
+  }
+
+  @override
+  void goToHomeScreen() {
+    Navigator.pushAndRemoveUntil(
+      _context,
+      MaterialPageRoute(
+        builder: (_) => const AppEntryScreen(),
+      ),
+      (route) => false,
     );
   }
 }

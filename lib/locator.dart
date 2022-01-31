@@ -25,6 +25,7 @@ import 'screen/store/grocery/grocery_domain_model.dart';
 import 'screen/store/grocery/grocery_notifier.dart';
 import 'screen/store/home/home_domain_model.dart';
 import 'screen/store/home/home_notifier.dart';
+import 'screen/store/order_accepted/order_accepted_notifier.dart';
 import 'screen/store/search/category/category_domain_model.dart';
 import 'screen/store/search/category/category_notifier.dart';
 import 'screen/store/search/category/category_tile_event_handler.dart';
@@ -172,6 +173,13 @@ void setUpLocator() {
   /// CartScreen
   get.registerFactoryParam<CartNotifier, BuildContext, void>(
     (context, _) => CartNotifier(
+      get<MyStoreFlowCoordinator>(param1: context),
+    ),
+  );
+
+  /// OrderAcceptedScreen
+  get.registerFactoryParam<OrderAcceptedNotifier, BuildContext, void>(
+    (context, _) => OrderAcceptedNotifier(
       get<MyStoreFlowCoordinator>(param1: context),
     ),
   );
