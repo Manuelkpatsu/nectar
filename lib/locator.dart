@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:nectar/screen/store/cart/cart_notifier.dart';
 import 'package:nectar/screen/store/grcoery_tile/grocery_tile_event_handler.dart';
 import 'package:nectar/screen/store/search/grocery_search/grocery_search_arguments.dart';
 
@@ -165,6 +166,13 @@ void setUpLocator() {
     (context, arguments) => GrocerySearchNotifier(
       get<GrocerySearchDomainModel>(),
       arguments,
+    ),
+  );
+
+  /// CartScreen
+  get.registerFactoryParam<CartNotifier, BuildContext, void>(
+    (context, _) => CartNotifier(
+      get<MyStoreFlowCoordinator>(param1: context),
     ),
   );
 }
